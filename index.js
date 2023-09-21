@@ -13,7 +13,6 @@ $(document).ready(() => {
   }
 
   const headerWidth = $(".header").width();
-  console.log(headerWidth);
   $(".marquee").width(headerWidth);
 
   const today = new Date();

@@ -11,34 +11,43 @@ body {
     gap: 25px;
 }
 
+h1, h2 {
+    margin: 1rem 0;
+}
+
 img {
     max-width: 100%;
+}
+
+.alien {
+    transform: scale(0.75);
+}
+
+.saucer {
+    transform: scale(0.4);
 }
 
 .header-message {
     display: flex;
     justify-content: space-around;
     margin-bottom: 25px;
+    align-items: center;
 }
 
 .header-content {
     border: 5px double lightgray;
     text-align: center;
     padding: 30px;
+    height: fit-content
 }
 
-.header-image {
-    width: max-content;
+.header-image-holder {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     justify-content: center;
     align-items: center;
 }
 
-.saucer {
-    width: 50%;
-    height: auto;
-}
 
 .marquee {
     background-color:yellow;
@@ -67,6 +76,10 @@ img {
     align-items: center;
 }
 
+.image-gallery > img {
+    max-width: 100%;
+}
+
 .bread-banner {
     background-image: url("./img/animated-bread.gif");
     width: 100%;
@@ -75,7 +88,7 @@ img {
     background-size: contain;
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 800px) {
     body {
         padding: 1rem 1em;
     }
@@ -92,13 +105,11 @@ img {
         padding: 12px;
     }
 
-    .header-image {
-        width: 4rem;
-        height: auto;
+    .header-image-holder {
+        flex-direction: column;
     }
 
-    .saucer {
-        width: 75%;
-        height: auto;
+    .saucer, .alien {
+        transform: none;
     }
 }
