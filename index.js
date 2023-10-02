@@ -1,4 +1,4 @@
-$(document).ready(() => {
+$(window).load(() => {
   const width = $(window).width();
 
   let marqueeSpeed;
